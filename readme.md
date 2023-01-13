@@ -31,7 +31,7 @@ When the task is done it zips the results and such zip is provided via a webserv
 ## Usage
 
 ```
-python3 main.py [args...]
+python3 graphicator.py [args...]
 ```
 
 ### Setting up a target
@@ -41,19 +41,19 @@ The first step is to configure the target. To do that you have to provide either
 **Setting a single target via arguments**
 
 ```
-python3 main.py --target https://subdomain.domain:port/graphql
+python3 graphicator.py --target https://subdomain.domain:port/graphql
 ```
 
 **Setting multiple targets**
 
 ```
-python3 main.py --target https://subdomain.domain:port/graphql --target https://target2.tld/graphql
+python3 graphicator.py --target https://subdomain.domain:port/graphql --target https://target2.tld/graphql
 ```
 
 **Setting targets via a file**
 
 ```
-python3 main.py --file file.txt
+python3 graphicator.py --file file.txt
 ```
 
 The file should contain one URL per line as such:
@@ -71,55 +71,55 @@ You may connect the tool with any proxy.
 **Connect to the default burp settings (port 8080)**
 
 ```
-python3 main.py --target target --default-burp-proxy
+python3 graphicator.py --target target --default-burp-proxy
 ```
 
 **Connect to your own proxy**
 
 ```
-python3 main.py --target target --use-proxy
+python3 graphicator.py --target target --use-proxy
 ```
 
 **Connect via Tor**
 
 ```
-python3 main.py --target target --use-tor
+python3 graphicator.py --target target --use-tor
 ```
 
 ### Using Headers
 
 ```
-python3 main.py --target target --header "x-api-key:60b725f10c9c85c70d97880dfe8191b3"
+python3 graphicator.py --target target --header "x-api-key:60b725f10c9c85c70d97880dfe8191b3"
 ```
 
 ### Enable Verbose
 
 ```
-python3 main.py --target target --verbose
+python3 graphicator.py --target target --verbose
 ```
 
 ### Enable Multi-threading
 
 ```
-python3 main.py --target target --multi
+python3 graphicator.py --target target --multi
 ```
 
 ### Disable warnings for insecure and self-signed certificates
 
 ```
-python3 main.py --target target --insecure
+python3 graphicator.py --target target --insecure
 ```
 
 ### Avoid using cached results
 
 ```
-python3 main.py --target target --no-cache
+python3 graphicator.py --target target --no-cache
 ```
 
 ### Example
 
 ```
-python3 main.py --target http://localhost:8000/graphql --verbose --multi
+python3 graphicator.py --target http://localhost:8000/graphql --verbose --multi
 
   _____                  __    _             __           
  / ___/____ ___ _ ___   / /   (_)____ ___ _ / /_ ___   ____
