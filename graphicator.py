@@ -178,7 +178,7 @@ def graphql_query(url, gquery, introsp=False):
         f.close()
         return j
 
-def make_simple_intronspection(url):
+def make_simple_introspection(url):
     q = "query {  __schema {    types {      name      fields {        name      }    }  } }"
     return graphql_query(url, q, True)
 
@@ -187,7 +187,7 @@ def make_full_introspection(url):
     return graphql_query(url, introspection_full, True)
 
 def enumerate_queries(url):
-    simple_intro = make_simple_intronspection(url)
+    simple_intro = make_simple_introspection(url)
     if simple_intro is not None and "data" in simple_intro and simple_intro["data"] is not None and "__schema" in simple_intro["data"]:
         full_intro = make_full_introspection(url)
         if full_intro is not None:

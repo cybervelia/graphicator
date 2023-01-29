@@ -17,7 +17,7 @@ To learn how to perform assessments on GraphQL endpoints: https://cybervelia.com
 ### Install on your system
 
 ```
-python3 install -r requirements.txt
+python3 -m pip install -r requirements.txt
 ```
 
 ### Using a container instead
